@@ -302,7 +302,7 @@ pop-growth
 pop-growth
 0
 1
-0.05
+0.1
 0.01
 1
 NIL
@@ -380,7 +380,7 @@ polis-threshold
 polis-threshold
 600
 1500
-1000.0
+1500.0
 1
 1
 NIL
@@ -427,7 +427,7 @@ SWITCH
 43
 territory-viz
 territory-viz
-0
+1
 1
 -1000
 
@@ -867,7 +867,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.1.1
+NetLogo 6.2.2
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -921,11 +921,8 @@ NetLogo 6.1.1
   <experiment name="CAA-basic-results" repetitions="100" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <timeLimit steps="1000"/>
+    <timeLimit steps="500"/>
     <metric>population-sizes</metric>
-    <enumeratedValueSet variable="interaction-mode">
-      <value value="false"/>
-    </enumeratedValueSet>
     <enumeratedValueSet variable="buffer-zone">
       <value value="30"/>
     </enumeratedValueSet>
@@ -1055,14 +1052,11 @@ NetLogo 6.1.1
       <value value="false"/>
     </enumeratedValueSet>
   </experiment>
-  <experiment name="CAA-fission" repetitions="10" runMetricsEveryStep="false">
+  <experiment name="CAA-fission" repetitions="100" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <timeLimit steps="500"/>
     <metric>population-sizes</metric>
-    <enumeratedValueSet variable="interaction-mode">
-      <value value="false"/>
-    </enumeratedValueSet>
     <enumeratedValueSet variable="buffer-zone">
       <value value="30"/>
     </enumeratedValueSet>
@@ -1082,15 +1076,62 @@ NetLogo 6.1.1
       <value value="0.1"/>
       <value value="0.2"/>
       <value value="0.5"/>
+      <value value="0.8"/>
+      <value value="1"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="pop-growth">
       <value value="0.05"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="scaling-exponent">
-      <value value="1.17"/>
+      <value value="1"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="time-limit">
-      <value value="1000"/>
+      <value value="500"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="village-threshold">
+      <value value="500"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="face-to-face">
+      <value value="150"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="territory-viz">
+      <value value="false"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="CAA-pop-growth" repetitions="50" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <timeLimit steps="500"/>
+    <metric>population-sizes</metric>
+    <enumeratedValueSet variable="buffer-zone">
+      <value value="30"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="innovation-rate">
+      <value value="0.1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="communities-number">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="carrying-capacity">
+      <value value="5000"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="polis-threshold">
+      <value value="1500"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="fission-probability">
+      <value value="0.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="pop-growth">
+      <value value="0.01"/>
+      <value value="0.03"/>
+      <value value="0.05"/>
+      <value value="0.1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="scaling-exponent">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="time-limit">
+      <value value="500"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="village-threshold">
       <value value="500"/>
